@@ -31,7 +31,7 @@ app.use("/orders", orderRoutes);
 app.use("/products", productRoutes);
 app.use("/images", imageRoutes);
 
-app.post("/create-payment", async (req, res) => {
+app.post("/create-payment", cors(), async (req, res) => {
   const { amount } = req.body;
   console.log(amount);
   try {
